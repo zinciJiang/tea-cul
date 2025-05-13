@@ -1,0 +1,438 @@
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-family: '华文中宋', '宋体';
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: #fff;
+    padding: 0 5px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    position: relative;
+    z-index: 0;
+}
+
+.form-group input:focus {
+    border-color: #579a47;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(87, 154, 71, 0.1);
+}
+
+.form-group input:focus + label,
+.form-group.focused label {
+    top: 0;
+    font-size: 12px;
+    color: #579a47;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+/* 登录框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    transform: translateY(-20px);
+    opacity: 0;
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-overlay.active .modal-container {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #666;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.modal-close:hover {
+    color: #333;
+    background: rgba(0, 0, 0, 0.05);
+    transform: rotate(90deg);
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h2 {
+    font-size: 24px;
+    color: #333;
+    font-family: '华文中宋', '宋体';
+}
+
+.modal-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #666;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-tab.active {
+    color: #579a47;
+    transform: scale(1.05);
+}
+
+.modal-tab::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #579a47;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(-50%);
+}
+
+.modal-tab.active::after {
+    width: 100%;
+}
+
+.modal-form {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding: 0 30px;
+    transform: translateX(50px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.form-submit {
+    width: 100%;
+    padding: 12px;
+    background: #579a47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    z-index: 1;
+}
+
+.form-submit:hover {
+    background: #467a39;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(87, 154, 71, 0.2);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.form-submit::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease-out, height 0.6s ease-out;
+}
+
+.form-submit:active::after {
+    width: 200px;
+    height: 200px;
+    opacity: 0;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 15px;
+    color: #666;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.5s forwards 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-footer a {
+    color: #579a47;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.form-footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #579a47;
+    transition: width 0.3s ease-in-out;
+}
+
+.form-footer a:hover::after {
+    width: 100%;
+}
+
+#loginForm, #registerForm {
+    min-height: 320px;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+
+.modal-forms-container {
+    position: relative;
+    min-height: 320px;
+    margin: 0 -30px;
+    overflow: hidden;
+}
+
+/* 错误提示 */
+.form-group.error input {
+    border-color: #ff4d4f;
+}
+
+.error-message {
+    color: #ff4d4f;
+    font-size: 12px;
+    margin-top: 4px;
+    animation: fadeIn 0.3s ease;
+}
+
+/* 加载状态 */
+.form-submit:disabled {
+    background-color: #b7b7b7;
+    cursor: not-allowed;
+}
+
+/* Toast提示 */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 10000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* 用户菜单 */
+.user-menu {
+    position: relative;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.username {
+    color: #333;
+    font-weight: 500;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: none;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.user-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu .logout-btn {
+    color: #ff4d4f;
+    border-top: 1px solid #eee;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .modal-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    .user-menu {
+        padding: 3px 8px;
+    }
+    
+    .username {
+        font-size: 14px;
+    }
+    
+    .dropdown-menu {
+        min-width: 100px;
+    }
+    
+    .dropdown-menu a {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+}
+
+/* IE兼容性支持 */
+.ie .modal-container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ie .toast {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ie .form-group input:focus + label,
+.ie .form-group.focused label {
+    transform: translateY(-20px) scale(0.8);
+    color: #579a47;
+} 

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="茶缘农心 - 传承茶文化，共筑茶缘梦">
+    <meta name="keywords" content="茶文化,茶叶,茶具,茶艺,农业合作">
+    <meta name="theme-color" content="#579a47">
+    
+    <!-- IE浏览器兼容性设置 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- 资源预加载 -->
+    <link rel="preload" href="css/header.css" as="style">
+    <link rel="preload" href="css/index.css" as="style">
+    <link rel="preload" href="css/footer.css" as="style">
+    <link rel="preload" href="css/login-modal.css" as="style">
+    <link rel="preload" href="js/index.js" as="script">
+    <link rel="preload" href="js/login-modal.js" as="script">
+    
+    <!-- 预连接第三方域名 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- PWA支持 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="茶缘农心">
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+    
+    <!-- 浏览器兼容性检测 -->
+    <script>
+        // 检测浏览器支持
+        if (!('flex' in document.documentElement.style) || 
+            !('transform' in document.documentElement.style) ||
+            !('transition' in document.documentElement.style)) {
+            alert('您的浏览器版本较低，建议使用最新版本的Chrome、Firefox、Safari或Edge浏览器访问本站。');
+        }
+        
+        // 添加IE兼容性支持
+        if (navigator.userAgent.indexOf('MSIE') !== -1 || navigator.userAgent.indexOf('Trident/') !== -1) {
+            document.documentElement.className += ' ie';
+        }
+    </script>
+    
+    <title>茶缘农心</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/login-modal.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- 头部 -->
+
+    <div class="header">
+        <div class="header-container">
+            <!-- logo区域 -->
+            <div class="header-logo">
+                <img src="images/logo6.png" width="250px" >
+            </div>
+            <!-- 导航栏 -->
+            <div class="header-nav">
+                <ul> 
+                    <li class="first-nav-li">
+                        <a href="index.html" class="now-nav" style="background: #579a47; border-radius: 5px; box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);">
+                            <span>首页</span>
+
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="timeline.html">
+                            <span>中蕐茶史</span>
+                            <div class="second-nav-1">
+                                <a href="ChaYiChaDao.html"><span>茶藝茶道</span></a>
+                                <a href="ChaFengChaSu.html"><span>茶風茶俗</span></a>                
+                            </div>
+                        </a>
+                        
+                    </li>
+                    <li>
+                        <a href="Products.html">
+                            <span>産品中心</span>
+                            <div class="second-nav-2">
+                                <a href="Products.html#tea-leaves"><span>茶叶</span></a>
+                                <a href="Products.html#tea-sets"><span>茶具</span></a>
+                            </div>
+                        </a>
+                       
+                    </li>
+                    <li>
+                        <a href="tea-news.html">
+                            <span>茶闻实讯</span>
+                            <div class="second-nav-3">
+                                <a href="tea-news.html"><span>热门文章</span></a>
+                                <a href="tea-news.html"><span>茶学资讯</span></a>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Cooperation.html">
+                            <span>合作交流</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 登录 -->
+             <div class="login-container">
+                <div class="login-btn"><a href="#">登录</a></div>
+                <div class="register-btn"><a href="#">注册</a></div>
+             </div>       
+        </div>    
+    </div>
+
+
+<!-- 中心内容区 -->
+<div class="banner-top">
+    <!-- <h1>茶文化</h1> -->
+</div>
+    <!-- 轮播图 -->
+<div class="slide-box">
+    <div class="banner-box"></div>
+    <button class="slide-left-btn material-icons">arrow_back_ios</button>
+    <button class="slide-right-btn material-icons">arrow_forward_ios</button>
+    <div class="pagination-box"></div>
+</div>
+
+<!-- 中心 -->
+<div class="center-box">
+    <!-- 推荐板块 -->
+     <div class="recommend-box">
+        <h2>推荐板块</h2>
+        <img class="icon" src="images/横线.png" width="120px">
+        <div class="recommend-list" >
+            <div class="recommend-item">
+                <img src="images/历史.png" width="60px">
+                <a href="timeline.html"><h3>中蕐茶史</h3></a>
+                <p>Explain the development history of Chinese tea history</p>
+            </div>
+            <div class="recommend-item">
+                <img src="images/叶子.png" width="60px">
+                <a href="Products.html"><h3>産品中心</h3></a>
+                <p>Some excellent products in collaboration with farmers</p>
+            </div>
+            <div class="recommend-item">
+                <img src="images/新闻.png" width="60px">
+                <a href="tea-news.html"><h3>茶闻时讯</h3></a>
+                <p>Learn about some of the latest tea-related news</p>
+            </div>
+            <div class="recommend-item">
+                <img src="images/伙伴.png" width="60px">
+                <a href="Cooperation.html"><h3>合作交流</h3></a>
+                <p>Those who are interested in tea and agricultural assistance are suitable for joining us</p>
+            </div>
+        </div>
+               
+     </div>
+     <!-- 茶文化介绍 -->
+    <div class="tea-culture-box">
+        
+        <div class="title-box">
+            <h2><span>关于茶文化</span></h2>
+        </div>
+        <div class="Eg-box">
+            <a>ABOUT TEA TEA CULTURE</a>
+        </div>
+        <div class="content-text">            
+            <h2>源远流长，博大精深</h2>
+            <div class="text-box">
+                <p>茶文化在中国有着悠久的历史和深厚的传统。它不仅仅是日常生活中的一种饮品，更是中国人精神生活的一部分。中国茶文化强调茶的制备和品饮过程，将这一过程艺术化，形成了独特的茶艺和茶道。茶艺不仅要求泡茶的技艺，还注重茶具的选择和茶室的布置，强调的是一种内心的平静和精神上的享受。而茶道则更多地包含了哲学思考，它教导人们在日常生活中寻找到一种超然的境界，通过品茶来修身养性，达到心灵的宁静与自我提升。</p>
+            <p>在全世界范围内，茶文化也有着广泛的传播和深远的影响。从中国传出后，日本发展出了独具特色的日本茶道，强调和敬清寂；英国则形成了闻名的英式下午茶，成为社交的一种方式；印度则有其独特的加入香料的奶茶，体现了当地风味。这些不同国家和地区的茶文化，不仅展现了茶的多样性，也反映了各地风情和文化特色。全球茶文化的交流和互动，促进了不同文明之间的理解和尊重，使得茶成为了世界性的文化符号和共同的语言。</p>
+            </div>
+            <div class="img-box">
+                <img src="images/bg/04.jpg" width="100%">
+            </div>
+            
+        </div>
+    </div>
+      
+</div>
+
+<!-- 图片鉴赏 -->
+<div class="tea-appreciation-box">
+    <!-- 标题 -->
+     <div class="title-box">
+        <b class="title"><span>名茶鉴赏</span><b/>
+        <a class="Eg">Tea appreciation</a>
+        <a href="#" class="more">了解更多>></a>
+     </div>
+    
+    <!-- 图片区 -->
+    <div class="tea-img-box">
+        <div class="shell">
+            <div class="img-box">
+                <img src="images/products/xihulongjing.jpg">
+                <span>西湖龙井</span>
+            </div>
+            <div class="img-box">
+                <img src="images/products/dongtinghubiluochun.jpg">
+                <span>洞庭碧螺春</span>
+            </div>
+            <div class="img-box">
+                <img src="images/products/huangshanmaofeng.jfif">
+                <span>黄山毛峰</span>
+            </div>
+            <div class="img-box">
+                <img src="images/products/junshanyinzhen.jpg">
+                <span>君山银针</span>
+            </div>
+            <div class="img-box">
+                <img src="images/products/wuyiyancha.jpg">
+                <span>武夷岩茶</span>
+            </div>
+            <div class="img-box">
+                <img src="images/products/qimenhongcha.jfif">
+                <span>祁门红茶</span>
+            </div>
+        </div>
+    </div>
+</div>
+<hr style="border-bottom: #5c1717 solid 3px;width: 85%;margin: 0 auto;">
+
+
+
+<!-- 制茶步骤 -->
+
+<div class="tea-making-box">
+    <br>
+    <hr style="width: 40%;margin-left: 40%;height: 2px; background-color: #8b8b8b;border: none;">
+    <h1>制茶步骤</h1>
+    <br>
+    <hr style="width: 40%;margin-left: 20%; height: 2px; background-color: #8b8b8b;border: none;"> 
+    <div class="process-wrapper">
+    <div id="progress-bar-container">
+	    <ul>
+		    <li class="step step01 active"><div class="step-inner">采摘</div></li>
+		    <li class="step step02"><div class="step-inner">萎凋</div></li>
+		    <li class="step step03"><div class="step-inner">揉捻</div></li>
+		    <li class="step step04"><div class="step-inner">发酵（或氧化）</div></li>
+		    <li class="step step05"><div class="step-inner">干燥</div></li>
+	    </ul>
+	
+	    <div id="line">
+		    <div id="line-progress"></div>
+	    </div>
+    </div>
+
+    <div id="progress-content-section">
+	    <div class="section-content discovery active">
+		    <h2>采摘<br>(plucking)</h2>
+		    <p>在制茶过程的第一步，需要从茶树上手工或机械采摘茶叶。通常采摘的是茶树顶端的嫩芽和最近的两片叶子。采摘的质量直接影响到最终茶叶的品质。高质量的茶叶往往要求一芽一叶或一芽两叶的标准，采摘时间多在早晨至下午，以避免露水和强烈阳光。</p>
+	    </div>
+	
+	    <div class="section-content strategy">
+		    <h2>萎凋<br>(withering)</h2>
+		    <p>采摘后的鲜叶需要经过萎凋，目的是减少水分，使茶叶软化，便于后续加工。萎凋可以是自然晾晒，也可以是使用萎凋机进行。萎凋过程中，茶叶会失去部分水分，叶片变得柔软，同时茶叶中的化学成分也会发生变化，比如香气成分开始形成。萎凋的时间和程度取决于所需的茶类和环境条件。</p>
+	    </div>
+	
+	    <div class="section-content creative">
+		    <h2>揉捻<br>(rolling)</h2>
+		    <p>揉捻的主要目的是使茶叶形状成型，并促进茶叶内部化学物质的转化。这一步骤中，茶叶被揉捻成紧密的形态（如球形、针形等），这有助于形成茶叶独特的外观。揉捻也会导致细胞结构破裂，有助于茶汁的析出，增强茶汤的口感和香气。手工或机器揉捻均可，不同的揉捻方法会影响茶叶的最终品质。</p>
+	    </div>
+	
+	    <div class="section-content production">
+		    <h2>发酵/氧化<br>(fermentation/oxidation)</h2>
+		    <p>这一步是形成茶叶颜色和香味的关键过程。对于制作红茶，称为"发酵"，茶叶在揉捻后堆积起来，在一定的温度和湿度下氧化，茶叶中的多酚、氨基酸等化合物发生化学反应，逐渐变红并产生特有的香气。对于制作绿茶，则要控制氧化，通常是通过加热来中止氧化过程，保持茶叶的绿色和清新口感。</p>
+	    </div>
+	
+	    <div class="section-content analysis">
+		    <h2>干燥<br>(drying)</h2>
+		    <p>最后一步是干燥，目的是降低茶叶的水分含量，使其稳定储存和长时间保存。干燥可以通过烘箱烘干、太阳晒干或者使用风扇干燥等多种方式进行。干燥不仅固定了茶叶中的化学成分，还帮助形成了茶叶的最终风味。干燥后的茶叶需要冷却并且通常要进行筛分和分级，以确保一致的品质。</p>
+	    </div>
+	    </div>
+    </div>
+</div>
+
+
+<!-- 茶叶功效 -->
+<div class="tea-efficacy-title">
+    <h1>茶叶功效</h1>
+</div>
+<div class="tea-efficacy">
+    
+	<div class="container">
+        
+		<div class="box">
+			<h2>01</h2>
+			<h3>降火清心</h3>
+            <br>
+			<p>"茗苦而寒，最能降火。火为百病，火降则上清矣。"<br><br>
+                译文：茶味道苦且性寒，最擅长于降火。火是导致多种疾病的原因，火气降低则上焦得以清爽。
+                <br><br>―――《本草纲目》
+			</p>
+		</div>
+		<div class="box">
+			<h2>02</h2>
+			<h3>清凉解渴</h3>
+            <br>
+			<p>"茶之为饮，味至寒，为饮最宜精行俭德之人。若热渴、凝闷、脑疼、目涩、四肢烦、百节不舒，聊四五啜，与醍醐、甘露抗衡也。"<br><br>
+                <b>译文：</b>作为饮品的茶，其性味最为寒凉，最适合品行端正有节俭美德的人饮用。如果感到燥热口渴、忧郁沉闷、头疼眼干、四肢烦乱、关节不畅，仅仅喝上四五口茶，就足以与最好的饮品——醍醐和甘露相媲美。
+                <br><br>―――《茶经》
+			</p>
+		</div>
+		<div class="box">
+			<h2>03</h2>
+			<h3>清心解毒</h3>
+            <br>
+			<p>"茗，苦茶，微寒，无毒，行优有俭，乃入心肺，清烦去腻，助精神爽朗，益肺凉肝，破积消瘀，止渴生津，解酒食毒。"<br>
+                译文： 茶的味道甜而且带有苦味，性质稍微寒凉，没有毒性。饮茶能清心烦、去油腻，使人精神爽快，还可以清热润肺、凉肝，消散体内积块，解除口渴，分解酒精和食物中的毒素。
+                <br><br>―――《本草·木部》
+			</p>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- 茶叶产品合集 -->
+<div class="tea-images">
+    <div class="title-box">
+        <h1>精品茶茗</h1>  
+    </div>
+   	
+	<section id="gallery-wrapper">
+		<article class="white-panel">
+			<img src="images/products/1-1.png" class="thumb">
+			<h1><a href="Products.html">碧螺春</a></h1>
+	  		<p>"清香绝俗"</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/2-3.png" class="thumb">
+			<h1><a href="Products.html">黄山毛峰</a></h1>
+	  		<p>鲜爽回甘</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/3-3.png" class="thumb">
+			<h1><a href="Products.html">西湖龙井</a></h1>
+	  		<p>色翠香郁</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/22-1.png" class="thumb">
+			<h1><a href="Products.html">庐山云雾</a></h1>
+	  		<p>香高持久</p>
+            <a href="Products.html" class="btn">查看���多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/21-1.png" class="thumb">
+			<h1><a href="Products.html">武夷岩茶</a></h1>
+	  		<p>岩韵明显</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/6-1.png" class="thumb">
+			<h1><a href="Products.html">铁观音</a></h1>
+	  		<p>香高韵长</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/7-1.png" class="thumb">
+			<h1><a href="Products.html">普洱茶</a></h1>
+	  		<p>陈香醇厚</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/8-2.png" class="thumb">
+			<h1><a href="Products.html">洞庭碧螺春</a></h1>
+	  		<p>嫩绿透翠</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/9-1.png" class="thumb">
+			<h1><a href="Products.html">安吉白茶</a></h1>
+	  		<p>甘甜清雅</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/10-1.png" class="thumb">
+			<h1><a href="Products.html">祁门红茶</a></h1>
+	  		<p>醇和香甜</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/11-1.png" class="thumb">
+			<h1><a href="Products.html">正山小种</a></h1>
+	  		<p>烟熏香浓</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/12-1.png" class="thumb">
+			<h1><a href="Products.html">金骏眉</a></h1>
+	  		<p>蜜香独特</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/7-2.png" class="thumb">
+			<h1><a href="Products.html">大红袍</a></h1>
+	  		<p>浓郁厚重</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/6-2.png" class="thumb">
+			<h1><a href="Products.html">白毫银针</a></h1>
+	  		<p>清雅显贵</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+		<article class="white-panel">
+			<img src="images/products/4-2.png" class="thumb">
+			<h1><a href="Products.html">君山银针</a></h1>
+	  		<p>香气清鲜</p>
+            <a href="Products.html" class="btn">查看更多</a>
+		</article>
+    </section>
+</div>
+
+
+<!-- 新闻区域 -->
+<div class="news-container">
+    <h1>茶闻热递</h1>
+	<div class="container">
+		<div class="news-card">
+			<div class="news-content">
+				<h2>1</h2>
+				<p>"茶马古道"文旅发展联盟在雅安成立</p>
+				<a href="tea-news.html">阅读更多</a>
+			</div>
+		</div>
+		<div class="news-card">
+			<div class="news-content">
+				<h2>2</h2>
+				<p>福建政和："中国白茶城"项目开工建设</p>
+				<a href="tea-news.html">阅读更多</a>
+			</div>
+		</div>
+		<div class="news-card">
+			<div class="news-content">
+				<h2>3</h2>
+				<p>四川雅安："中国藏茶联盟"成立大会召开</p>
+				<a href="tea-news.html">阅读更多</a>
+			</div>
+		</div>
+		<div class="news-card">
+			<div class="news-content">
+				<h2>4</h2>
+				<p>福建松溪：获"中国九龙大白茶之乡"称号</p>
+				<a href="tea-news.html">阅读更多</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 底部 -->
+    <!-- 视频轮播 -->
+    <div class="video-box">
+        <a>视频鉴赏</a>
+        <span>Video Appreciation</span> 
+        <hr style="border-bottom: #6c1c1c solid 3px;width: 100%;margin: 0px auto;margin-bottom: 20px;">
+        <section>
+            <video id='slider' autoplay muted loop src="video/v1.mp4"></video>
+            <ul class="navigation">
+                <li onclick="videoUrl(1)"><img src="images/v1.png"></li>
+                <li onclick="videoUrl(2)"><img src="images/v2.png"></li>
+                <li onclick="videoUrl(3)"><img src="images/v3.png"></li>
+                <li onclick="videoUrl(4)"><img src="images/v4.png"></li>
+            </ul>
+        </section>
+    </div>
+
+
+
+
+
+<!-- 尾部 -->
+ <div class="footer">
+    
+    <div class="footer-container">
+        <!-- 底部logo -->
+        <div class="footer-logo">
+            <img src="images/logo9.png" width="360px" >
+        </div>
+        <!-- 菜单区域 -->
+        <div class="footer-content">
+            <div class="footer-content-1">
+                <ul>
+                    <li><a href="index.html" class="first"><span>首页</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-content-2">
+                <ul>
+                    <li><a href="timeline.html" class="first"><span>中蕐茶史</span></a></li>
+                    <li><a href="ChaYiChaDao.html"><span>茶藝茶道</span></a></li>
+                    <li><a href="ChaFengChaSu.html"><span>茶風茶俗</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-content-3">
+                <ul>
+                    <li><a href="Products.html" class="first"><span>産品中心</span></a></li>
+                    <li><a href="Products.html#tea-leaves"><span>茶叶</span></a></li>
+                    <li><a href="Products.html#tea-sets"><span>茶具</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-content-4">
+                <ul>
+                    <li><a href="tea-news.html" class="first"><span>茶闻实讯</span></a></li>
+                    <li><a href="tea-news.html"><span>热门文章</span></a></li>
+                    <li><a href="tea-news.html"><span>茶学资讯</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-content-5">
+                <ul>
+                    <li><a href="Cooperation.html" class="first"><span>合作交流</span></a></li>
+                </ul>
+            </div>
+        </div>
+    <!-- 底部· -->
+        <div class="footer-bottom">
+            <p>Copyright © 2024 茶缘农心. All Rights Reserved.</p>
+            <p>ICP备案号：赣ICP备233051321号-网络2304JCK</p>
+        </div>
+    </div>
+</div>
+
+ 
+
+ <script src="js/index.js"></script>
+ <script src="js/jq1.js"></script>
+ <script src="js/jq2.js"></script>
+ <script src="js/jq3.js"></script>
+ <script src="js/pinterest_grid.js"></script>
+ <script src="js/login-modal.js"></script>
+ <script src="js/back-to-top.js"></script>
+ 	<script>
+    
+    $(".step").click( function() {
+		$(this).addClass("active").prevAll().addClass("active");
+		$(this).nextAll().removeClass("active");
+	});
+
+	$(".step01").click( function() {
+		$("#line-progress").css("width", "3%");
+		$(".discovery").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step02").click( function() {
+		$("#line-progress").css("width", "25%");
+		$(".strategy").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step03").click( function() {
+		$("#line-progress").css("width", "50%");
+		$(".creative").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step04").click( function() {
+		$("#line-progress").css("width", "75%");
+		$(".production").addClass("active").siblings().removeClass("active");
+	});
+
+	$(".step05").click( function() {
+		$("#line-progress").css("width", "100%");
+		$(".analysis").addClass("active").siblings().removeClass("active");
+	});
+
+
+
+    $(function(){
+			$("#gallery-wrapper").pinterest_grid({
+				no_columns: 4,
+                padding_x: 10,
+                padding_y: 10,
+                margin_bottom: 50,
+                single_column_breakpoint: 700
+			});	
+		});
+    </script>
+
+    <script>
+    // 视频双击全屏功能
+    document.addEventListener('DOMContentLoaded', function() {
+        const video = document.getElementById('slider');
+        let lastClick = 0;
+
+        // 单击视频暂停/播放
+        video.addEventListener('click', function(e) {
+            const currentTime = new Date().getTime();
+            const timeDiff = currentTime - lastClick;
+            
+            if (timeDiff < 300) { // 双击判断阈值
+                // 双击时切换全屏
+                if (!document.fullscreenElement) {
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.webkitRequestFullscreen) {
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) {
+                        video.msRequestFullscreen();
+                    }
+                } else {
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            } else {
+                // 单击时暂停/播放
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+            lastClick = currentTime;
+        });
+
+        // 进入全屏时取消循环播放
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement) {
+                video.loop = false;
+            } else {
+                video.loop = true;
+            }
+        });
+    });
+
+    // 原有的视频切换功能
+    function videoUrl(index) {
+        const video = document.getElementById('slider');
+        const wasPlaying = !video.paused;
+        video.src = `video/v${index}.mp4`;
+        if (wasPlaying) {
+            video.play();
+        }
+    }
+    </script>
+
+    <!-- 性能优化脚本 -->
+    <script>
+        // 延迟加载图片
+        document.addEventListener('DOMContentLoaded', function() {
+            var lazyImages = [].slice.call(document.querySelectorAll('img[data-src]'));
+            
+            if ('IntersectionObserver' in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.removeAttribute('data-src');
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            }
+        });
+
+        // 性能监控
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var timing = window.performance.timing;
+                var loadTime = timing.loadEventEnd - timing.navigationStart;
+                console.log('页面加载时间：', loadTime + 'ms');
+            }, 0);
+        });
+
+        // 错误监控
+        window.onerror = function(msg, url, lineNo, columnNo, error) {
+            console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + lineNo + '\nColumn: ' + columnNo + '\nError object: ' + JSON.stringify(error));
+            return false;
+        };
+
+        // 资源加载优化
+        document.addEventListener('DOMContentLoaded', function() {
+            // 延迟加载非关键JavaScript
+            setTimeout(function() {
+                var deferredScripts = document.querySelectorAll('script[defer]');
+                deferredScripts.forEach(function(script) {
+                    var newScript = document.createElement('script');
+                    if (script.src) {
+                        newScript.src = script.src;
+                    }
+                    document.body.appendChild(newScript);
+                });
+            }, 2000);
+        });
+    </script>
+
+    <!-- Service Worker注册 -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

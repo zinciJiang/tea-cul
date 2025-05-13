@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: "STZhongsong", "华文中宋", "DFKai-SB", "STSong", "宋体", "SimSun", "楷体", "KaiTi", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+.header{
+    width: 100%;
+    height: 150px;
+    background: #e6ede4;
+    /* box-shadow: 0px 3px 7px -7px rgba(0,0,0,0.1); */
+    box-shadow: 0px 4px 7px -7px rgba(0,0,0,0.8);
+    z-index: 999;
+    
+    
+}
+.header-container{
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+    min-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #e6ede4;
+    box-shadow: 0px 4px 7px -7px rgba(0,0,0,0.8);
+    /* box-shadow: 2px 2px 10px rgba(0,0,0,0.1); */
+}
+/* logo区域 */
+.header-logo{
+    width: 250px;
+    height: 90px;
+    /* border: 1px solid black; */
+    background-size: 250px;
+    overflow: hidden;
+    background-size: 250px;
+    position: absolute;
+    left: 5%;
+    bottom: 25%;
+}
+.header-logo img{
+    position: absolute;
+    transform: translateY(-147px);
+    filter: drop-shadow(#61743a 0 100px)
+    
+}
+
+
+/* 导航栏 */
+.header-nav{
+    position: absolute;
+    z-index: 120;
+    left: 32%;
+    bottom: 25%;
+    height: 30px;
+    /* background-color: aqua; */
+}
+.header-nav ul{
+    width: 600px;
+    height: 30px;
+    margin: 0 auto;
+    /* background-color: orange; */
+    right: 15%;
+    bottom: 2%;
+}
+.header-nav ul li{
+    width: 120px;
+    float: left;
+    padding: 0 5px 0 5px;
+    line-height: 30px;
+    position: relative;   
+}
+.header-nav ul li:not(:last-child){
+        border-right: 1px solid black;
+    }
+.header-nav ul li a{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: "STZhongsong", "华文中宋", "DFKai-SB", "STSong", "宋体", "SimSun", "楷体", "KaiTi", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+
+.header-nav ul li a:hover{
+    background-color: #579a47;
+    border-radius: 5px 5px 0px 0px;
+    transition: all 0.1s;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+}
+
+/* 登陆注册 */
+.login-container{
+    width: 47px;
+    height: 40px;
+    /* background-color: orange; */
+    position: absolute;
+    right: 3%;
+    top: 10%;
+    float: left;
+}
+.login-container a{
+    display: block;
+    width: 20px;
+    line-height: 15px;  
+    font-size: 15px;
+}
+.register-btn{
+    position: absolute;
+    right: 1px;
+    top: 4px;
+    float: left;
+}
+.login-btn{
+    position: absolute;
+    left: 2px;
+    top: 4px;
+    float: left;
+    border-right: 1px solid black;
+}
+.login-container a{
+    font-size: bold;
+    font-family: "STZhongsong", "华文中宋", "DFKai-SB", "STSong", "宋体", "SimSun", "楷体", "KaiTi", "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+}
+.login-btn a:hover{
+    background: #4ec33e;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+.register-btn:hover{
+    background-color: #e4af1b;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+/* 中华茶史 */
+.header-nav .second-nav-1{
+    width: 120px;
+    height: 95px;
+    background: #579a47;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    top: 28px;
+    display: none;
+    z-index: 120;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    
+}
+.header-nav ul li:hover .second-nav-1{
+    display: block;
+    background-color: #579a47;
+}
+
+.second-nav-1 a{
+    display: block;
+    width: 120px;  
+    padding: 2px 0px 5px 0px;
+    font-size: 18px;
+    /* background-color: #e4af1b; */
+}
+.second-nav-1 a span{
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    border-bottom: 1.5px solid black;   
+}
+.second-nav-1 a span:hover{
+    background-color: #e4af1b;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* 产品中心 */
+.header-nav .second-nav-2{
+    width: 120px;
+    height: 95px;
+    background: #579a47;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    top: 28px;
+    display: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    
+}
+.header-nav ul li:hover .second-nav-2{
+    display: block;
+    background-color: #579a47;
+}
+
+.second-nav-2 a{
+    display: block;
+    width: 120px;  
+    padding: 2px 0px 5px 0px;
+    font-size: 18px;
+    /* background-color: #e4af1b; */
+}
+.second-nav-2 a span{
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    border-bottom: 1.5px solid black;   
+}
+.second-nav-2 a span:hover{
+    background-color: #e4af1b;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* 茶闻实讯 */
+.header-nav .second-nav-3{
+    width: 120px;
+    height: 95px;
+    background: #579a47;
+    border-radius: 10px;
+    position: absolute;
+    left: 0px;
+    top: 28px;
+    display: none;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 1px 1px 5px 0px rgba(82, 82, 82, 0.75);
+    
+}
+.header-nav ul li:hover .second-nav-3{
+    display: block;
+    background-color: #579a47;
+}
+
+.second-nav-3 a{
+    display: block;
+    width: 120px;  
+    padding: 2px 0px 5px 0px;
+    font-size: 18px;
+    /* background-color: #e4af1b; */
+}
+.second-nav-3 a span{
+    display: block;
+    width: 100px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+    border-bottom: 1.5px solid black;   
+}
+.second-nav-3 a span:hover{
+    background-color: #e4af1b;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}

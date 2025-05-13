@@ -1,0 +1,859 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.content-top{
+    width: 100%;
+    height: 10px;
+}
+.center{
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #F8F5F0;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+/* 内容区 */
+.center-container{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.center-container p{
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: black;
+    /* background-color: orange; */
+    text-align: center;
+    font-family: '华文新魏','华文行楷','仿宋','楷体';
+    font-size: 30px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+
+}
+
+.center-content-1,
+.center-content-2,
+.center-content-3,
+.center-content-4,
+.center-content-5,
+.center-content-6
+{
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+    margin-bottom: 35px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.center-content-1-1,
+.center-content-2-1,
+.center-content-3-1,
+.center-content-4-1,
+.center-content-5-1,
+.center-content-6-1{
+    width: 33%;
+    height: 100%;
+    background-color: gray;
+    border-radius: 8px;
+    position: absolute;
+}
+.center-content-1-1,
+.center-content-3-1,
+.center-content-5-1
+{
+    left: 0;
+}
+.center-content-2-1,
+.center-content-4-1,
+.center-content-6-1{
+    right: 0;
+}
+
+
+/* 奇数 */
+.main-1,
+.main-3,
+.main-5{
+    position: relative;
+    left: 380px;
+    width: 565px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+.center-content-1 h2,
+.center-content-3 h2,
+.center-content-5 h2{
+    font-size: 20px;
+    font-family: "华文中宋";
+    color: #333333;
+    /* background-color: orange; */
+    position: absolute;
+    top: 60px;
+}
+.center-content-1 img,
+.center-content-3 img,
+.center-content-5 img{
+    position: absolute;
+    height: 22px;
+    top: 95px;
+    left: -20px;
+}
+.center-content-1 p,
+.center-content-3 p,
+.center-content-5 p{
+    position: absolute;
+    top: 90px;
+    font-size: 15px;
+    color: ;
+    /* background-color: orange; */
+    text-align: left;
+    font-family: "华文中宋";
+}
+
+/* 偶数 */
+.main-2,
+.main-4,
+.main-6{
+    position: relative;
+    left: 45px;
+    width: 565px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+.center-content-2 h2,
+.center-content-4 h2,
+.center-content-6 h2{
+    font-size: 20px;
+    font-family: "华文中宋";
+    color: #333333;
+    /* background-color: orange; */
+    position: absolute;
+    top: 60px;
+}
+.center-content-2 img,
+.center-content-4 img,
+.center-content-6 img{
+    position: absolute;
+    height: 22px;
+    top: 95px;
+    left: -20px;
+}
+.center-content-2 p,
+.center-content-4 p,
+.center-content-6 p{
+    position: absolute;
+    top: 90px;
+    font-size: 15px;
+    color: black;
+    /* background-color: orange; */
+    text-align: left;
+    font-family: "华文中宋";
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin: 40px 0;
+    font-family: "楷体", KaiTi, serif;
+}
+
+/* 茶艺六境 */
+.tea-realm-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2em;
+    color: #4A3520;
+    margin-bottom: 40px;
+    font-family: "楷体", KaiTi, serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, 
+        transparent,
+        #8B4513,
+        transparent
+    );
+}
+
+.realm-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 40px;
+}
+
+.realm-item {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(145deg, #fff, #FFFBF0);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.realm-item:hover {
+    transform: translateY(-10px);
+}
+
+.realm-item i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+/* 清境 - 使用清新的青色，象征清澈纯净 */
+.realm-item:nth-child(1) i {
+    color: #00BCD4;
+}
+
+/* 静境 - 使用深蓝色，象征宁静深邃 */
+.realm-item:nth-child(2) i {
+    color: #1A237E;
+}
+
+/* 雅境 - 使用典雅的紫色，象征高雅尊贵 */
+.realm-item:nth-child(3) i {
+    color: #9C27B0;
+}
+
+/* 和境 - 使用温暖的橙色，象征和谐融洽 */
+.realm-item:nth-child(4) i {
+    color: #FF9800;
+}
+
+/* 真境 - 使用自然的绿色，象征本真自然 */
+.realm-item:nth-child(5) i {
+    color: #388E3C;
+}
+
+/* 禅境 - 使用沉稳的灰色，象征超然物外 */
+.realm-item:nth-child(6) i {
+    color: #607D8B;
+}
+
+/* 鼠标悬停效果 */
+.realm-item:hover i {
+    transform: scale(1.1);
+}
+
+.realm-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.realm-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 茶道步骤 */
+.tea-ceremony-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px 0;
+}
+
+.ceremony-steps {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px;
+    background: linear-gradient(145deg, #fff, #FFFBF0);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.step::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+/* 为每个步骤设置不同的边框颜色 */
+.step:nth-child(1)::before {
+    background: #FF9800; /* 备具 - 温暖的橙色，象征准备开始 */
+}
+
+.step:nth-child(2)::before {
+    background: #03A9F4; /* 温具 - 清新的蓝色，象征清洁温润 */
+}
+
+.step:nth-child(3)::before {
+    background: #4CAF50; /* 赏茶 - 自然的绿色，象征茶叶本色 */
+}
+
+.step:nth-child(4)::before {
+    background: #E91E63; /* 注水 - 活力的红色，象征沸水激活 */
+}
+
+.step:nth-child(5)::before {
+    background: #9C27B0; /* 观汤 - 优雅的紫色，象征品鉴审美 */
+}
+
+.step:nth-child(6)::before {
+    background: #795548; /* 品茗 - 醇厚的褐色，象征茶香浓郁 */
+}
+
+.step:hover::before {
+    width: 100%;
+    opacity: 0.1;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3em;
+    margin-right: 20px;
+    flex-shrink: 0;
+    font-family: "楷体", KaiTi, serif;
+    position: relative;
+    background: transparent;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+/* 为每个步骤设置不同的数字颜色 */
+.step:nth-child(1) .step-number {
+    color: #FF9800;
+    border-color: #FF9800;
+}
+
+.step:nth-child(2) .step-number {
+    color: #03A9F4;
+    border-color: #03A9F4;
+}
+
+.step:nth-child(3) .step-number {
+    color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.step:nth-child(4) .step-number {
+    color: #E91E63;
+    border-color: #E91E63;
+}
+
+.step:nth-child(5) .step-number {
+    color: #9C27B0;
+    border-color: #9C27B0;
+}
+
+.step:nth-child(6) .step-number {
+    color: #795548;
+    border-color: #795548;
+}
+
+.step:hover .step-number {
+    transform: scale(1.1) rotate(360deg);
+}
+
+.step-content {
+    flex-grow: 1;
+}
+
+.step-content h3 {
+    color: #333;
+    margin-bottom: 12px;
+    font-size: 1.4em;
+    font-family: "楷体", KaiTi, serif;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.step-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.step:hover .step-content h3::after {
+    width: 50px;
+}
+
+.step-content p {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-top: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.step-content p::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: currentColor;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .ceremony-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        padding: 20px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+}
+
+/* 茶艺器具 */
+.tea-tools-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px 0;
+    position: relative;
+}
+
+/* 添加水墨风装饰 */
+.tea-tools-section::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(139, 69, 19, 0.05) 0%, transparent 60%),
+        radial-gradient(circle at 90% 90%, rgba(139, 69, 19, 0.05) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tool-item {
+    text-align: center;
+    background: linear-gradient(145deg, #fff, #FFFBF0);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(139, 69, 19, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.tool-item:hover {
+    transform: perspective(1000px) rotateY(10deg) translateY(-5px);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tool-item:hover::before {
+    opacity: 1;
+}
+
+.tool-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding-top: 75%; /* 4:3 比例 */
+}
+
+.tool-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tool-item:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.tool-content {
+    padding: 25px;
+    background: linear-gradient(to bottom, 
+        rgba(255, 255, 255, 0.95),
+        rgba(255, 251, 240, 0.98)
+    );
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.tool-item h3 {
+    font-size: 1.6em;
+    color: #4A3520;
+    margin-bottom: 15px;
+    font-family: "楷体", KaiTi, serif;
+    position: relative;
+    display: inline-block;
+}
+
+.tool-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #8B4513;
+    transition: width 0.3s ease;
+}
+
+.tool-item:hover h3::after {
+    width: 100%;
+}
+
+.tool-item p {
+    color: #5C4033;
+    line-height: 1.8;
+    font-family: "楷体", KaiTi, serif;
+    font-size: 1.1em;
+    position: relative;
+    padding-top: 10px;
+}
+
+.tool-item p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 1px;
+    background: rgba(139, 69, 19, 0.3);
+}
+
+/* 添加茶具功能标签 */
+.tool-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: #8B4513;
+    box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover .tool-tag {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .tools-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .tool-item {
+        transform: none !important;
+    }
+
+    .tool-content {
+        padding: 20px;
+    }
+
+    .tool-item h3 {
+        font-size: 1.4em;
+    }
+
+    .tool-item p {
+        font-size: 1em;
+    }
+}
+
+/* 茶艺礼仪 */
+.tea-etiquette-section {
+    padding: 60px 0;
+    background: rgba(255, 255, 255, 0.95);
+    margin: 40px 0;
+    position: relative;
+}
+
+.tea-etiquette-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, 
+        transparent 0%,
+        #8B4513 20%,
+        #8B4513 80%,
+        transparent 100%
+    );
+    opacity: 0.3;
+}
+
+.tea-etiquette-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, 
+        transparent 0%,
+        #8B4513 20%,
+        #8B4513 80%,
+        transparent 100%
+    );
+    opacity: 0.3;
+}
+
+.etiquette-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.etiquette-item {
+    background: linear-gradient(145deg, #fff, #FFFBF0);
+    border-radius: 8px;
+    padding: 35px;
+    box-shadow: 0 4px 15px rgba(139, 69, 19, 0.1);
+    position: relative;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+    transition: all 0.3s ease;
+}
+
+.etiquette-item::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid rgba(139, 69, 19, 0.1);
+    border-radius: 4px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.etiquette-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(139, 69, 19, 0.15);
+}
+
+.etiquette-item:hover::before {
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+}
+
+.etiquette-item h3 {
+    color: #4A3520;
+    font-size: 1.6em;
+    margin-bottom: 25px;
+    text-align: center;
+    font-family: "楷体", KaiTi, serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.etiquette-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+}
+
+.etiquette-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.etiquette-item li {
+    color: #5C4033;
+    line-height: 2;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(139, 69, 19, 0.2);
+    position: relative;
+    padding-left: 30px;
+    font-family: "楷体", KaiTi, serif;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.etiquette-item li:last-child {
+    border-bottom: none;
+}
+
+.etiquette-item li::before {
+    content: '•';
+    position: absolute;
+    left: 10px;
+    color: #8B4513;
+    font-size: 1.2em;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.etiquette-item li:hover {
+    padding-left: 35px;
+    color: #8B4513;
+}
+
+.etiquette-item li:hover::before {
+    left: 15px;
+    opacity: 1;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .etiquette-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .etiquette-item {
+        padding: 25px;
+    }
+
+    .etiquette-item h3 {
+        font-size: 1.4em;
+    }
+
+    .etiquette-item li {
+        font-size: 1em;
+        padding: 10px 0 10px 25px;
+    }
+}
+
+/* 动画效果 */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 统一响应式调整 */
+@media (max-width: 768px) {
+    .center-container {
+        width: 95%;
+        padding: 20px 0;
+    }
+
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+
+    .tea-culture-section,
+    .tea-realm-section,
+    .tea-ceremony-section,
+    .tea-tools-section,
+    .tea-etiquette-section {
+        margin: 20px 0;
+        padding: 30px 0;
+    }
+}
+
+/* 统一动画效果 */
+[data-aos] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}

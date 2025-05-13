@@ -1,0 +1,591 @@
+.cp-container {
+	min-height: 100vh;
+	background: #f5f5f5;
+	padding: 0;
+}
+
+.cp-top {
+	height: 120px;
+	background: url('../images/bg/cooperation-bg.jpg') center/cover;
+	margin-bottom: 20px;
+}
+
+.cp-content {
+	max-width: 1200px;
+	margin: -30px auto 0;
+	padding: 0 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.cp-title {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.cp-title h1 {
+	font-size: 30px;
+	color: #333;
+	margin: 10px 0;
+}
+
+#form-wrap {
+	background: #fff;
+	padding: 25px 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	margin-bottom: 30px;
+}
+
+.form-header {
+	text-align: center;
+	margin-bottom: 25px;
+}
+
+.form-header h2 {
+	color: #579a47;
+	font-size: 26px;
+	margin-bottom: 15px;
+}
+
+.form-header p {
+	color: #666;
+	line-height: 1.6;
+}
+
+.form-group {
+	margin-bottom: 25px;
+	position: relative;
+}
+
+.form-group label {
+	display: block;
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #666;
+	font-family: '华文中宋', '宋体';
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	background: #fff;
+	padding: 0 5px;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.form-group input,
+.form-group textarea {
+	width: 100%;
+	padding: 12px;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	background: transparent;
+	position: relative;
+	z-index: 0;
+}
+
+.form-group textarea {
+	height: 150px;
+	resize: vertical;
+	min-height: 150px;
+	max-height: 300px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: #579a47;
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(87, 154, 71, 0.1);
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+	top: 0;
+	font-size: 12px;
+	color: #579a47;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
+/* 调整textarea的label位置 */
+.form-group textarea ~ label {
+	top: 25px;
+}
+
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+	top: 0;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+	color: transparent;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+	border-color: #579a47;
+	box-shadow: 0 0 0 3px rgba(87, 154, 71, 0.1);
+	outline: none;
+}
+
+.form-group textarea {
+	height: 150px;
+	resize: vertical;
+	min-height: 150px;
+	max-height: 300px;
+}
+
+/* 添加输入框动效 */
+.form-group input:focus,
+.form-group textarea:focus {
+	transform: translateY(-2px);
+}
+
+.submit-btn {
+	background: #579a47;
+	color: white;
+	padding: 12px 35px;
+	border: none;
+	border-radius: 8px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.submit-btn:hover {
+	background: #467a39;
+	transform: translateY(-2px);
+	box-shadow: 0 5px 15px rgba(87, 154, 71, 0.3);
+}
+
+.submit-btn:active {
+	transform: translateY(0);
+}
+
+/* 添加波纹效果 */
+.submit-btn::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0;
+	height: 0;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	transition: width 0.6s ease-out, height 0.6s ease-out;
+}
+
+.submit-btn:active::after {
+	width: 200px;
+	height: 200px;
+	opacity: 0;
+}
+
+/* 输入验证反馈 */
+.form-group.success input,
+.form-group.success textarea {
+	border-color: #28a745;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+	border-color: #dc3545;
+}
+
+/* 错误提示 */
+.form-group .error-message {
+	display: none;
+	color: #dc3545;
+	font-size: 12px;
+	margin-top: 5px;
+	position: absolute;
+	bottom: -20px;
+	left: 12px;
+}
+
+.form-group.error .error-message {
+	display: block;
+}
+
+/* 添加输入框图标 */
+.form-group.with-icon {
+	position: relative;
+}
+
+.form-group.with-icon input {
+	padding-left: 40px;
+}
+
+.form-group.with-icon i {
+	position: absolute;
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #666;
+	transition: color 0.3s ease;
+}
+
+.form-group.with-icon input:focus ~ i {
+	color: #579a47;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+	.form-group label {
+		font-size: 14px;
+	}
+	
+	.form-group input,
+	.form-group textarea {
+		font-size: 14px;
+		padding: 10px 12px;
+	}
+	
+	.form-group input:focus ~ label,
+	.form-group textarea:focus ~ label,
+	.form-group input:not(:placeholder-shown) ~ label,
+	.form-group textarea:not(:placeholder-shown) ~ label {
+		font-size: 12px;
+	}
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+	.cp-container {
+		padding: 30px 0;
+	}
+	
+	#form-wrap {
+		padding: 20px;
+	}
+	
+	.form-header h2 {
+		font-size: 24px;
+	}
+}
+
+/* 在现有样式后添加信封动画相关样式 */
+
+.envelope-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(87, 154, 71, 0.15);
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
+	backdrop-filter: blur(5px);
+}
+
+.envelope-wrapper.show {
+	display: flex;
+	animation: fadeIn 0.4s ease-out;
+}
+
+.envelope {
+	position: relative;
+	width: 300px;
+	height: 200px;
+	background: #fff;
+	border-radius: 10px;
+	transform-style: preserve-3d;
+	perspective: 1000px;
+	box-shadow: 0 0 20px rgba(87, 154, 71, 0.2);
+	border: 2px solid #579a47;
+	overflow: hidden;
+}
+
+/* 添加信封正面样式 */
+.envelope-front {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	z-index: 4;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	transform: translateY(100%);
+}
+
+.envelope-front .stamp {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 50px;
+	height: 60px;
+	background: rgba(87, 154, 71, 0.1);
+	border: 1px dashed #579a47;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	color: #579a47;
+}
+
+.envelope-front .postmark {
+	position: absolute;
+	top: 25px;
+	right: 80px;
+	width: 60px;
+	height: 60px;
+	opacity: 0.6;
+}
+
+.envelope-front .address {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #333;
+	line-height: 1.6;
+}
+
+.envelope-front .address p {
+	margin: 5px 0;
+}
+
+.envelope-front .seal {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: #579a47;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 12px;
+	transform: rotate(-15deg);
+	opacity: 0.8;
+}
+
+/* 修改信封动画 */
+.envelope-wrapper.show .envelope-front {
+	animation: showFront 0.8s ease-out 2.3s forwards;
+}
+
+@keyframes showFront {
+	0% {
+		opacity: 0;
+		transform: translateY(100%) scale(0.9);
+	}
+	50% {
+		opacity: 1;
+		transform: translateY(0) scale(1.05);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
+}
+
+/* 修改信件插入动画时间 */
+.envelope-wrapper.show .letter {
+	animation: insertLetter 1.5s ease-out forwards;
+}
+
+@keyframes insertLetter {
+	0% {
+		transform: translate(-50%, 100%) scale(1);
+		opacity: 0;
+	}
+	20% {
+		transform: translate(-50%, -100%) scale(1);
+		opacity: 1;
+	}
+	40% {
+		transform: translate(-50%, -50%) scale(1) rotate(0deg);
+		opacity: 1;
+	}
+	60% {
+		transform: translate(-50%, -50%) scale(0.9) rotate(5deg);
+		opacity: 1;
+	}
+	80% {
+		transform: translate(-50%, -30%) scale(0.8) rotate(0deg);
+		opacity: 0.8;
+	}
+	100% {
+		transform: translate(-50%, 0%) scale(0.8);
+		opacity: 0;
+	}
+}
+
+.envelope-flap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #579a47, #467a39);
+	clip-path: polygon(0 0, 50% 50%, 100% 0);
+	transform-origin: top;
+	transition: transform 0.5s ease-out;
+	border-radius: 10px 10px 0 0;
+	z-index: 3;
+}
+
+.envelope-back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border-radius: 10px;
+	z-index: 1;
+}
+
+.envelope-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	overflow: hidden;
+	border-radius: 8px;
+	z-index: 2;
+}
+
+.letter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	background: #fff;
+	padding: 25px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	box-shadow: 0 0 15px rgba(87, 154, 71, 0.1);
+	border-radius: 8px;
+	border: 1px solid rgba(87, 154, 71, 0.2);
+	z-index: 2;
+}
+
+.letter-content {
+	color: #333;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.letter-content p:first-child {
+	color: #579a47;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.letter-content p:last-child {
+	color: #666;
+	font-size: 15px;
+}
+
+/* 动画关键帧 */
+@keyframes fadeIn {
+	from { 
+		opacity: 0;
+		backdrop-filter: blur(0px);
+	}
+	to { 
+		opacity: 1;
+		backdrop-filter: blur(5px);
+	}
+}
+
+.envelope-wrapper.show .envelope-flap {
+	animation: foldFlap 1.2s ease-out 0.8s forwards;
+}
+
+.envelope-wrapper.show .letter {
+	animation: insertLetter 1.5s ease-out forwards;
+}
+
+@keyframes foldFlap {
+	0% { 
+		transform: rotateX(0deg);
+		background: linear-gradient(135deg, #579a47, #467a39);
+	}
+	100% { 
+		transform: rotateX(180deg);
+		background: linear-gradient(135deg, #467a39, #579a47);
+	}
+}
+
+.submit-btn.sending {
+	pointer-events: none;
+	opacity: 0.7;
+}
+
+.submit-btn.sending::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin: -10px 0 0 -10px;
+	border: 2px solid rgba(255, 255, 255, 0.3);
+	border-top-color: #fff;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+	.envelope {
+		width: 280px;
+		height: 180px;
+	}
+	
+	.letter {
+		width: 85%;
+		padding: 20px;
+	}
+	
+	.letter-content p:first-child {
+		font-size: 18px;
+	}
+	
+	.letter-content p:last-child {
+		font-size: 14px;
+	}
+}
+
+/* 添加轻微的悬浮动画 */
+.envelope-wrapper.show .envelope {
+	animation: floatEnvelope 2s ease-in-out infinite;
+	animation-delay: 3.1s;
+}
+
+@keyframes floatEnvelope {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}

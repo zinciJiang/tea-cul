@@ -1,0 +1,19 @@
+# 茶缘农心网站重定向规则
+
+# 格式: [源路径] [目标路径] [状态码]
+# 默认状态码为302，可以指定为301（永久重定向）
+
+# 主页重定向
+/home / 301
+
+# 确保所有页面请求都能正确处理重定向
+/index.html / 301
+/timeline.html /timeline 301
+/ChaYiChaDao.html /ChaYiChaDao 301
+/ChaFengChaSu.html /ChaFengChaSu 301
+/Products.html /Products 301 # 恢复Products页面的重定向，移除锚点链接的重定向
+/tea-news.html /tea-news 301
+/Cooperation.html /Cooperation 301
+
+# 通配符重写规则应放在最后
+/* /:splat 200

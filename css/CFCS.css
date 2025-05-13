@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  
+.content-top{
+    width: 100%;
+    height: 10px;
+}
+.center{
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    position: relative;
+}
+.center .title p{
+    /* display: block; */
+    margin: o auto;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    /* border: red solid 2px; */
+    font-family: '华文新魏','华文行楷','仿宋','楷体';
+    font-size: 30px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+
+/* 卡片 */
+.box{
+    display: flex;
+    width: 100%;
+    max-width: 1500px;
+    background-color: #F5F5F5;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 60px;
+
+}
+.content-box{
+  height: 100%;
+  display: grid;
+  place-items: center;
+  
+  /* background-color: #f2f2f2; */
+  text-align: center;
+}
+.content-box{
+    width: 1300px;
+    height: 2000px;
+    margin: 0 auto; 
+    /* background-color: greenyellow; */
+}
+.card-box {
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* border: red solid 2px; */
+}
+.card{
+    height: 290px;
+    max-width: 350px;
+    min-width:300px;
+    /* margin: 20px; */
+    margin-bottom: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: 0.4s;
+}
+.card:hover {
+    height: 470px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+} 
+.card .img {
+    height: 200px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+.card .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.card .top-text {
+    padding: 5px;
+    
+}
+.card .top-text .name{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: '华文中宋','宋体';
+     color: #202020;
+}
+.card .top-text p{
+    font-size:20px;
+    font-weight: 600;
+    font-family: '幼圆';
+    color: #e74c3c;
+    line-height: 20px;
+}
+
+
+.card:hover .bottom-text {
+    opacity: 1;
+    visibility: visible;
+}
+.card .bottom-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    padding: 0 20px 10px 20px;
+    margin-top: 5px ;
+    margin-top: 5px;
+    background: #fff;
+    
+}
+.card .bottom-text .text {
+    text-align: justify; 
+}
+.card .bottom-text .text p{
+    font-family: '仿宋','华文中宋','宋体';
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+}
+.card .bottom-text .btn {
+    margin: 10px 0;
+    text-align: left;
+}
+.card .bottom-text .btn .read-more-btn {
+    background-color: #e74c3c;
+    color: #f2f2f2;
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: none;
+    font-family: '华文新魏','楷体';
+    cursor: pointer;
+    transition: 0.6s;
+    text-decoration: none;
+    display: inline-flex;
+}
+.card .bottom-text .btn .read-more-btn:hover {
+    transform: scale(0.9);
+}
+@media screen and (max-width: 978px) {
+    .container {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .card {
+        max-width: 700px;
+        margin: 20px 0;
+    }
+}
+
+.preview-text {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.expanded-content {
+    display: none;
+}
+
+.read-more-btn {
+    display: none;
+}
+
+/* 模态框样式 */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+/* 添加模糊效果的容器 */
+body.modal-open .header,
+body.modal-open .center,
+body.modal-open .footer {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+/* 确保模态框本身不会被模糊 */
+.content-modal {
+    filter: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 90%;
+    max-width: 1000px;
+    min-height: 600px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e6e6e6 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    z-index: 1001;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.content-modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal-content {
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.modal-title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: "华文行楷", "楷体", KaiTi, serif;
+    padding-bottom: 25px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.modal-text {
+    color: #333;
+    line-height: 2.2;
+    font-size: 1.4em;
+    font-family: "仿宋", FangSong, serif;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+
+.modal-text p {
+    margin-bottom: 25px;
+    text-indent: 2.5em;
+    position: relative;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-modal:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transform: rotate(90deg);
+}
+
+/* 自定义滚动条 */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .content-modal {
+        width: 95%;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .modal-title {
+        font-size: 2em;
+        margin-bottom: 25px;
+        padding-bottom: 20px;
+    }
+
+    .modal-text {
+        font-size: 1.2em;
+        line-height: 2;
+        letter-spacing: 1px;
+    }
+
+    .modal-text p {
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        text-indent: 2em;
+    }
+}
